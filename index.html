@@ -97,7 +97,12 @@
          </section>
 
          <section class="form-section">
-            <form class="contact-form" id="contact-form" novalidate>
+            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="9dd9d7c2-02b8-436f-8953-7b3f97ab5c07"
+                >
                 <span class="form-eyebrow">// start a project</span>
                 <h2>Tell me about your project</h2>
                 <p class="form-sub">Fill in the details below — the more context, the better I can help.</p>
@@ -105,11 +110,17 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first-name">First name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="John" required />
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first_name"
+                            placeholder="John"
+                            required
+                        />
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last name</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Doe" required />
+                        <input type="text" id="last-name" name="last_name" placeholder="Doe" required />
                     </div>
                 </div>
 
@@ -121,7 +132,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="project-type">Project type</label>
-                        <select id="project-type" name="project-type" required>
+                        <select id="project-type" name="project_type" required>
                             <option value="" selected disabled>Select one</option>
                             <option value="new-website">New website</option>
                             <option value="redesign">Website redesign</option>
